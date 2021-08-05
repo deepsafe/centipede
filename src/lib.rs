@@ -19,11 +19,12 @@ pub mod juggling;
 pub mod wallet;
 extern crate bulletproof;
 extern crate curv;
+#[cfg(feature = "parallel")]
 extern crate rayon;
 
-#[macro_use]
 extern crate serde_derive;
 extern crate serde;
+extern crate zeroize;
 
 #[derive(Copy, PartialEq, Eq, Clone, Debug)]
 pub enum Errors {
